@@ -3,7 +3,15 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "serve": "bun ladle serve"
+    "serve": "ladle serve -p 61110",
+    "serve-prod": "ladle preview -p 61110",
+    "build-preview": "ladle build && ladle preview -p 61110",
+    "build": "ladle build",
+    "lint": "echo 'no lint'",
+    "test-dev": "TYPE=dev bun exec playwright test",
+    "test-prod": "TYPE=prod bun exec playwright test",
+    "test": "bun test-dev && bun test-prod",
+    "test:update": "TYPE=update bun exec playwright test -u"
   },
   "devDependencies": {
     "@playwright/test": "^1.39.0",
