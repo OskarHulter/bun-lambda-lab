@@ -16,7 +16,9 @@
   "devDependencies": {
     "@playwright/test": "^1.39.0",
     "@types/node": "^20.8.7",
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "wallace-cli": "^3.0.0",
+    "wrangler": "^3.14.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
