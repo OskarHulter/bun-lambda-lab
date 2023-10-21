@@ -2,7 +2,12 @@
   "name": "bun-lambda-lab",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "serve": "bun ladle serve"
+  },
   "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.7",
     "bun-types": "latest"
   },
   "peerDependencies": {
@@ -15,6 +20,7 @@
     "convex": "^1.4.1",
     "htmx.org": "^1.9.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sync-fetch": "^0.5.2"
   }
 }
