@@ -17,7 +17,10 @@
 		"test-prod": "TYPE=prod bun exec playwright test",
 		"test": "bun test-dev && bun test-prod",
 		"import": "convex import tasks sampleData.jsonl",
-		"test:update": "TYPE=update bun exec playwright test -u"
+		"test:update": "TYPE=update bun exec playwright test -u",
+		"clean-all": "bun clean-dist & bun clean-deps",
+		"clean-dist": "rm -rf ./packages/*/dist & rm -rf ./packages/*/tsconfig.tsbuildinfo & rm -rf ./apps/*/dist & rm -rf ./apps/*/.next",
+		"clean-deps": "rm -rf ./packages/*/node_modules & rm -rf ./apps/*/node_modules & rm -rf ./node_modules"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20230419.0",
